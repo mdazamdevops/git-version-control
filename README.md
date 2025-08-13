@@ -1,121 +1,50 @@
-# Full Stack DevOps Project – Git Version Control
+## Git Version Control
 
-## Overview
-This project demonstrates **version control best practices** using Git and GitHub in a DevOps environment.  
-It contains a **Backend** (Python Flask) and **Frontend** (Node.js), each containerized using Docker.  
-The repository is structured to follow proper branching strategies, tagging, and documentation.
+This repository is a demonstration of a standard Git branching and version control workflow, commonly used in DevOps and software development projects. The purpose is to showcase best practices for managing code, from feature development to release.
 
 ---
 
-## 🛠 Tech Stack
-- **Backend:** Python Flask, Docker, `requirements.txt`
-- **Frontend:** Node.js, HTML, CSS, JavaScript, Docker
-- **Version Control:** Git, GitHub
-- **Documentation:** Markdown (`README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`)
+## Project Purpose
 
----
+The main goal of this project is to provide a clear, hands-on example of the following concepts:
 
-## Project Structure
-\`\`\`
-├── .gitignore
-├── backend
-│   ├── app.py
-│   ├── Dockerfile
-│   └── requirements.txt
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── docs
-│   └── tasks.md
-├── frontend
-│   ├── Dockerfile
-│   ├── index.html
-│   ├── package.json
-│   ├── package-lock.json
-│   └── server.js
-└── README.md
-\`\`\`
-
----
-
-## Setup Instructions
-
-### Clone the Repository
-
-git clone <your_repo_url>
-cd <repo_name>
-\`\`\`
-
-### Backend Setup
-\`\`\`bash
-cd backend
-pip install -r requirements.txt
-python app.py
-\`\`\`
-
-### Frontend Setup
-
-cd frontend
-npm install
-node server.js
-\`\`\`
+-   **Branching Strategy:** Using `main`, `dev`, and `feature` branches.
+-   **Committing Changes:** Writing clear and descriptive commit messages.
+-   **Pull Requests:** Merging code in a controlled and reviewed manner.
+-   **Tagging:** Marking specific commits as releases (e.g., `v1.0.0`).
+-   **Documentation:** Maintaining a `README.md` and `.gitignore` file.
 
 ---
 
 ## Branching Strategy
-- **main** → Stable production-ready code
-- **dev** → Active development branch
-- **feature/*** → Individual features in separate branches
 
-Example:
+This project follows the GitFlow-lite model:
 
-git checkout -b dev
-git push -u origin dev
-
-git checkout -b feature/frontend-ui
-git push -u origin feature/frontend-ui
-\`\`\`
+-   `main`: This branch represents the stable, production-ready code. Code is only merged into `main` from the `dev` branch for a new release.
+-   `dev`: This is the primary development branch. All feature branches are created from `dev` and merged back into it via Pull Requests.
+-   `feature/*`: Individual features are developed in their own branches (e.g., `feature/add-login-page`). This keeps development work isolated until it's ready for integration.
 
 ---
 
-## Git Workflow Steps
-1. **Initialize repo & push to GitHub**
+## How to Contribute
 
-git init
-git branch -M main
-git add .
-git commit -m "Initial commit - project setup"
-git remote add origin <your_repo_url>
-git push -u origin main
-\`\`\`
-2. **Create branches for development**
-3. **Work on features in \`feature/\` branches**
-4. **Push changes & open Pull Requests**
-5. **Merge dev into main when stable**
-6. **Add tags for releases**
+Since this is a demo project, direct contributions aren't necessary. However, you can clone or fork this repository to experiment with the workflow yourself.
 
-git tag -a v1.0 -m "First stable release"
-git push origin v1.0
-\`\`\`
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/mdazamdevops/git-version-control.git](https://github.com/mdazamdevops/git-version-control.git)
+    ```
+2.  **Navigate into the project:**
+    ```bash
+    cd git-version-control
+    ```
+3.  **Create your own feature branch and start experimenting!**
+    ```bash
+    git checkout -b feature/my-new-idea
+    ```
 
 ---
 
-## .gitignore Example
-\`\`\`
-# Python
-__pycache__/
-*.pyc
+## Author
 
-# Node
-node_modules/
-
-# General
-.env
-\`\`\`
-
-
-## Documentation Files
-- **README.md** → Project details & setup guide
-- **docs/tasks.md** → Tracks all tasks completed
-- **CHANGELOG.md** → Lists project changes
-- **CONTRIBUTING.md** → Contribution rules
-
+* **mdazamdevops** - [GitHub Profile](https://github.com/mdazamdevops)
