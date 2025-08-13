@@ -1,50 +1,100 @@
-## Git Version Control
+# GIT VERSION-CONTROLLED DEVOPS PROJECT
 
-This repository is a demonstration of a standard Git branching and version control workflow, commonly used in DevOps and software development projects. The purpose is to showcase best practices for managing code, from feature development to release.
+## Project Overview
+This project demonstrates the use of Git for version control in a DevOps environment.  
+It follows **branching strategies**, **proper commit practices**, and **pull request workflows** to ensure smooth collaboration.
+
+The project is designed for:
+- Learning Git best practices
+- Practicing branching workflows
+- Integrating DevOps version control in real projects
 
 ---
 
-## Project Purpose
+## 🛠 Tools & Technologies
+- Git & GitHub
+- Linux Bash
+- DevOps Workflow
 
-The main goal of this project is to provide a clear, hands-on example of the following concepts:
+---
 
--   **Branching Strategy:** Using `main`, `dev`, and `feature` branches.
--   **Committing Changes:** Writing clear and descriptive commit messages.
--   **Pull Requests:** Merging code in a controlled and reviewed manner.
--   **Tagging:** Marking specific commits as releases (e.g., `v1.0.0`).
--   **Documentation:** Maintaining a `README.md` and `.gitignore` file.
+## Git Workflow
+
+# 1. Clone the repository
+git clone https://github.com/mdazamdevops/git-version-control.git
+cd <repo-name>
+
+# 2. Create branches
+git checkout -b dev        # Development branch
+git checkout -b feature/ui # Feature branch
+git checkout -b main       # Main branch (production-ready)
+
+# 3. Make changes
+nano <file-name>           # Edit your file
+git add <file-name>
+git commit -m "Add new feature"
+
+# 4. Push changes
+git push origin <branch-name>
+
+# 5. Pull Request
+#   - Open PR from feature -> dev
+#   - Review & approve changes
+#   - Merge into dev, then main
 
 ---
 
 ## Branching Strategy
-
-This project follows the GitFlow-lite model:
-
--   `main`: This branch represents the stable, production-ready code. Code is only merged into `main` from the `dev` branch for a new release.
--   `dev`: This is the primary development branch. All feature branches are created from `dev` and merged back into it via Pull Requests.
--   `feature/*`: Individual features are developed in their own branches (e.g., `feature/add-login-page`). This keeps development work isolated until it's ready for integration.
+- **main** → Production-ready code
+- **dev** → Staging / testing code
+- **feature/*** → New features or bug fixes
 
 ---
 
-## How to Contribute
+## Commit Message Rules
+- Use **present tense** → `"Add login page"`, not `"Added login page"`
+- Keep commits **focused** on one change
+- Avoid vague messages like `"update file"`
 
-Since this is a demo project, direct contributions aren't necessary. However, you can clone or fork this repository to experiment with the workflow yourself.
+---
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/mdazamdevops/git-version-control.git](https://github.com/mdazamdevops/git-version-control.git)
-    ```
-2.  **Navigate into the project:**
-    ```bash
-    cd git-version-control
-    ```
-3.  **Create your own feature branch and start experimenting!**
-    ```bash
-    git checkout -b feature/my-new-idea
-    ```
+## Why Git in DevOps?
+
+Git is essential in DevOps because it:
+- Tracks changes to code
+- Allows collaboration between team members
+- Supports CI/CD workflows
+- Enables rollback to previous stable versions
+- Maintains project history
+
+---
+
+## Useful Git Commands
+
+# Check status of repo
+git status
+
+# View branches
+git branch
+
+# Switch branch
+git checkout <branch-name>
+
+# Merge branch into current branch
+git merge <branch-name>
+
+# Pull latest changes
+git pull origin <branch-name>
+
+# Delete branch locally
+git branch -d <branch-name>
+
+# Delete branch remotely
+git push origin --delete <branch-name>
 
 ---
 
 ## Author
-
-* **mdazamdevops** - [GitHub Profile](https://github.com/mdazamdevops)
+Name: Mohd Azam Uddin  
+Role: DevOps Intern & Developer  
+GitHub: https://github.com/mdazamdevops  
