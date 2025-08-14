@@ -40,7 +40,7 @@ The repository is structured to follow proper branching strategies, tagging, and
 ## Setup Instructions
 
 ### Clone the Repository
-\`\`\`bash
+
 git clone <your_repo_url>
 cd <repo_name>
 \`\`\`
@@ -53,7 +53,7 @@ python app.py
 \`\`\`
 
 ### Frontend Setup
-\`\`\`bash
+
 cd frontend
 npm install
 node server.js
@@ -67,7 +67,7 @@ node server.js
 - **feature/*** → Individual features in separate branches
 
 Example:
-\`\`\`bash
+
 git checkout -b dev
 git push -u origin dev
 
@@ -79,7 +79,7 @@ git push -u origin feature/frontend-ui
 
 ## Git Workflow Steps
 1. **Initialize repo & push to GitHub**
-\`\`\`bash
+
 git init
 git branch -M main
 git add .
@@ -92,7 +92,7 @@ git push -u origin main
 4. **Push changes & open Pull Requests**
 5. **Merge dev into main when stable**
 6. **Add tags for releases**
-\`\`\`bash
+
 git tag -a v1.0 -m "First stable release"
 git push origin v1.0
 \`\`\`
